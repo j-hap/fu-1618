@@ -63,7 +63,7 @@ class CalculatorCore {
       return op;
     } catch (NumberFormatException ex) {
       error = true;
-      text.setText("Not a Number!");
+      text.setText("Invalid Number!");
       return 0;
     }
   }
