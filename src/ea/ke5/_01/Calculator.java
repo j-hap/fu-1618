@@ -114,8 +114,8 @@ public class Calculator extends Frame {
 
     TextField text = new TextField("");
     text.setBackground(Color.WHITE);
-    // disables manual editing of text field
-    text.setEditable(false);
+    text.setEditable(false); // disables manual editing of text field
+    text.setFocusable(false); // no blinking cursor
     // places text in main layout
     this.add(text, BorderLayout.NORTH);
 
