@@ -3,7 +3,7 @@ package ea.ke5._02;
 import java.util.ArrayList;
 
 class Fahnenmast {
-  private ArrayList<Fahnenbeobachter> watchers = new ArrayList<Fahnenbeobachter>();
+  private final ArrayList<Fahnenbeobachter> watchers = new ArrayList<Fahnenbeobachter>();
   private Fahnenposition status;
 
   public void addFahnenbeobachter(Fahnenbeobachter neuerbeobachter) {
@@ -27,7 +27,7 @@ class Fahnenmast {
 }
 
 enum Fahnenposition {
-  OBEN, HALBMAST, UNBEFLAGGT;
+  OBEN, HALBMAST, UNBEFLAGGT
 }
 
 // Der View
