@@ -100,7 +100,7 @@ class CalculatorCore {
 }
 
 public class Calculator extends Frame {
-  private CalculatorCore core;
+  private final CalculatorCore core;
 
   Calculator() {
     // Calculator is view and controller component of MVC pattern
@@ -134,11 +134,11 @@ public class Calculator extends Frame {
 
     // buttons with actionListeners that modify the operation to be done
     OperatorButton bPlus = new OperatorButton('+');
-    bPlus.addActionListener((event) -> core.setOperation((op1, op2) -> Math.addExact(op1, op2)));
+    bPlus.addActionListener((event) -> core.setOperation(Math::addExact));
     OperatorButton bMinus = new OperatorButton('-');
-    bMinus.addActionListener((event) -> core.setOperation((op1, op2) -> Math.subtractExact(op1, op2)));
+    bMinus.addActionListener((event) -> core.setOperation(Math::subtractExact));
     OperatorButton bTimes = new OperatorButton('*');
-    bTimes.addActionListener((event) -> core.setOperation((op1, op2) -> Math.multiplyExact(op1, op2)));
+    bTimes.addActionListener((event) -> core.setOperation(Math::multiplyExact));
 
     OperatorButton bEquals = new OperatorButton('=');
     bEquals.addActionListener((event) -> core.calcResult());
