@@ -1,6 +1,6 @@
 package ea.ke6._03;
 
-import java.awt.*;
+import java.awt.Color;
 
 /**
  * States that a Philosopher can have, including a color to each state

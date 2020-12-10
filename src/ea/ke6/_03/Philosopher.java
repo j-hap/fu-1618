@@ -37,13 +37,13 @@ class Philosopher extends ColoredCircle implements Runnable {
 
   private void pickUpLeftStick() {
     // tries to pick up stick to his left (same index as himself)
-    pickUpStick(position);
+    pickUpStick(position + 1);
     System.out.println("Philosopher " + position + " picked up left stick.");
   }
 
   private void pickUpRightStick() {
     // tries to pick up stick to his left (index of himself +1)
-    pickUpStick(position + 1);
+    pickUpStick(position);
     System.out.println("Philosopher " + position + " picked up right stick.");
   }
 
@@ -109,7 +109,7 @@ class Philosopher extends ColoredCircle implements Runnable {
     super.paintComponent(g);
     // marks sitting philosophers with surrounding box
     if (hasChair) {
-      g.drawRect(1,1,getWidth()-2,getHeight()-2);
+      g.drawRect(1, 1, getWidth() - 2, getHeight() - 2);
     }
   }
 
