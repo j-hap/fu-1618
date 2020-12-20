@@ -29,6 +29,10 @@ class Table extends JFrame {
     notifyAll();
   }
 
+  public Table(int nSeats) {
+    this(nSeats, null);
+  }
+
   public Table(int nSeats, Waiter waiter) {
     tg = new TableGraphics(nSeats);
     stickIsAvailable = new boolean[nSeats];
@@ -36,7 +40,7 @@ class Table extends JFrame {
     Arrays.fill(stickIsAvailable, true);
 
     setSize(600, 600);
-    setLayout(new CircularLayout(CircularLayout.TWELVE, true));
+    setLayout(new CircularLayout(true));
     add(tg);
 
     // place philosophers at table and let them do their thing immediately, does not matter

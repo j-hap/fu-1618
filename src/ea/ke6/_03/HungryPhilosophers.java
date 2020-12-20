@@ -4,6 +4,7 @@ public class HungryPhilosophers {
   public static void main(String[] args) {
     int nSeats = 5;
     new Table(nSeats, new Waiter(nSeats - 1));
+//    new Table(nSeats);
     return;
   }
 }

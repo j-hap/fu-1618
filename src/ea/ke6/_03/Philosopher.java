@@ -125,13 +125,17 @@ class Philosopher extends ColoredCircle implements Runnable {
   }
 
   private void getUp() {
-    waiter.leaveSeat();
+    if (waiter != null) {
+      waiter.leaveSeat();
+    }
     hasChair = false;
     System.out.println("Philosopher " + position + " got up.");
   }
 
   private void sitDown() {
-    waiter.getSeat();
+    if (waiter != null) {
+      waiter.getSeat();
+    }
     hasChair = true;
     System.out.println("Philosopher " + position + " sat down.");
   }
